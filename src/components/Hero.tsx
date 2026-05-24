@@ -34,7 +34,7 @@ export default function Hero({ onExploreClick, onSubscribeShortcut, introActive 
         <motion.div
           layoutId="sparrow-logo-brand"
           transition={{
-            duration: 2.3,
+            duration: 2.2,
             ease: [0.16, 1, 0.3, 1],
           }}
           className="relative z-50 origin-left"

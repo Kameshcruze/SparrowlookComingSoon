@@ -27,10 +27,10 @@ export default function IntroScreen({ onComplete }: IntroScreenProps) {
       setHasStartedMovement(true);
     }, 200);
 
-    // Fade out and deliver complete callback after the smooth ease settles (approx 2.8s)
+    // Fade out and deliver complete callback right as the movement is elegant and sweeps (1.0s)
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 2850);
+    }, 1000);
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -124,7 +124,7 @@ export default function IntroScreen({ onComplete }: IntroScreenProps) {
           initial={getInitialPosition()}
           animate={hasStartedMovement ? getTargetPosition() : getInitialPosition()}
           transition={{
-            duration: 2.5, // 2-3 seconds premium cinematic sweep
+            duration: 2.2, // Premium cinematic sweep
             ease: [0.16, 1, 0.3, 1], // Exquisite luxurious slow ease-out
           }}
           style={{

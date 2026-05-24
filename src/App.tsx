@@ -181,7 +181,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={!introActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 1.1, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           id="brand-identity-section"
         >
           <BrandIdentity />
@@ -191,7 +191,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={!introActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 1.3, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
         >
           <CountdownTeaser />
         </motion.div>
@@ -200,7 +200,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={!introActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 1.5, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
           id="why-sparrow-section"
         >
           <WhySparrow />
@@ -210,7 +210,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={!introActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 1.7, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
           id="stay-updated-section"
         >
           <StayUpdated />
@@ -220,7 +220,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={!introActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 1.9, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
           id="social-teaser-section"
         >
           <SocialTeaser />
@@ -231,7 +231,7 @@ export default function App() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={!introActive ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 1.0, delay: 2.1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
       >
         <Footer 
           onScrollToTop={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
