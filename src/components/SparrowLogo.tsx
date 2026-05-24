@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../Layer 0.png';
+import brandLogoImg from '../LogoSparrowlook.png';
 
 interface SparrowLogoProps {
   className?: string;
@@ -8,43 +8,43 @@ interface SparrowLogoProps {
 }
 
 export default function SparrowLogo({ className = '', iconOnly = false, size = 'md' }: SparrowLogoProps) {
-  // Balanced geometric text scaling for wordmark size presets
-  const dimensions = {
-    sm: 'text-sm sm:text-base font-extrabold tracking-[0.08em]',
-    md: 'text-lg sm:text-xl md:text-2xl font-black tracking-[0.1em]',
-    lg: 'text-2xl sm:text-3xl md:text-4xl font-black tracking-[0.1em]',
-    hero: 'text-3xl sm:text-5xl md:text-6xl font-black tracking-[0.08em]'
+  // We use precise container heights to fit nicely into the navigation, footer, and intro screen flow.
+  // Because LogoSparrowlook.png is a square 1:1 image with substantial top/bottom padding,
+  // we set a wider image width inside a vertical overflow-hidden container to zoom in and crop out
+  // the empty padding, making the actual visual design fill the exact layout space required.
+  const containerHeights = {
+    sm: 'h-6 sm:h-7',
+    md: 'h-11 sm:h-14',
+    lg: 'h-16 sm:h-20',
+    hero: 'h-48 sm:h-60 md:h-[250px]'
   };
 
-  const iconSizes = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6 sm:w-7 sm:h-7',
-    lg: 'w-9 h-9 sm:w-11 sm:h-11',
-    hero: 'w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32'
+  const imageWidths = {
+    sm: 'w-[110px] sm:w-[130px]',
+    md: 'w-[210px] sm:w-[260px]',
+    lg: 'w-[320px] sm:w-[400px]',
+    hero: 'w-[950px] sm:w-[1180px] md:w-[1450px]'
   };
 
-  const currentSize = dimensions[size];
-  const currentIconSize = iconSizes[size];
+  const currentHeight = containerHeights[size];
+  const currentWidth = imageWidths[size];
 
   return (
-    <div className={`inline-flex items-center select-none ${className}`} id="sparrow-look-logo-only">
-      {/* Premium uploaded Sparrow brand mark image */}
+    <div 
+      className={`relative overflow-hidden flex items-center justify-center select-none ${currentHeight} ${className}`} 
+      id="sparrow-look-logo-only"
+    >
       <img
-        src={logoImg}
-        className={`${currentIconSize} shrink-0 object-contain transition-transform duration-300 mr-2 sm:mr-3`}
-        alt="Sparrow Logo"
+        src={brandLogoImg}
+        style={{
+          mixBlendMode: 'multiply'
+        }}
+        className={`${currentWidth} max-w-none h-auto shrink-0 transition-transform duration-300 pointer-events-none`}
+        alt="SPARROWLOOK"
         referrerPolicy="no-referrer"
-        id="sparrow-bird-logo-img"
+        id="sparrow-brand-logo-img"
       />
-      
-      {!iconOnly && (
-        <span
-          className={`font-logo text-brand-primary select-none uppercase leading-none pointer-events-none tracking-[0.1em] ${currentSize}`}
-          id="brand-logo-text"
-        >
-          SPARROWLOOK
-        </span>
-      )}
     </div>
   );
 }
+

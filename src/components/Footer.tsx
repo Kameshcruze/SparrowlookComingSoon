@@ -1,7 +1,7 @@
 import React from 'react';
 import SparrowLogo from './SparrowLogo';
 import { Mail, ArrowUpCircle, Globe, Compass, Shield, Origami } from 'lucide-react';
-import logoImg from '../Layer 0.png';
+import logoImg from '../LogoSparrowlook.png';
 
 interface FooterProps {
   onScrollToTop: () => void;
@@ -101,9 +101,8 @@ export default function Footer({ onScrollToTop, onExploreClick, onSubscribeShort
           <div className="flex flex-col gap-1.5 items-center sm:items-start text-center sm:text-left">
             <p className="text-[10px] font-mono text-stone-400 tracking-wider animate-fade-in inline-flex items-center gap-1.5 justify-center sm:justify-start">
               © {currentYear} 
-              <span className="inline-flex items-center text-brand-primary font-bold">
-                <img src={logoImg} className="w-3.5 h-3.5 mr-1.5 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
-                SPARROWLOOK
+              <span className="inline-flex items-center">
+                <img src={logoImg} className="h-3.5 w-auto object-contain" alt="SPARROWLOOK" referrerPolicy="no-referrer" />
               </span>. ALL RIGHTS RESERVED.
             </p>
             <p className="text-[9px] font-mono text-stone-400 tracking-widest uppercase">
