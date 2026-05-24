@@ -101,12 +101,17 @@ export default function Footer({ onScrollToTop, onExploreClick, onSubscribeShort
         {/* Footnotes line block (Privacy, trademark, credits) */}
         <div className="mt-16 pt-8 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-6" id="footer-licensing-block">
           
-          {/* Copyright details */}
-          <p className="text-[10px] font-mono text-stone-400 tracking-wider">
-            © {currentYear} SPARROWLOOK. ALL RIGHTS RESERVED.
-          </p>
+          {/* Copyright details & Developer Credit */}
+          <div className="flex flex-col gap-1.5 items-center sm:items-start text-center sm:text-left">
+            <p className="text-[10px] font-mono text-stone-400 tracking-wider animate-fade-in">
+              © {currentYear} SPARROWLOOK. ALL RIGHTS RESERVED.
+            </p>
+            <p className="text-[9px] font-mono text-stone-400 tracking-widest uppercase">
+              Developed by <a href="https://elitewebdevelopers.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:text-red-700 transition-all duration-300 underline underline-offset-4 hover:drop-shadow-[0_0_8px_rgba(210,20,58,0.3)]">Elite</a>
+            </p>
+          </div>
 
-          <div className="flex flex-wrap gap-6 text-[10px] font-mono text-stone-400 tracking-wider">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-6 text-[10px] font-mono text-stone-400 tracking-wider">
             <span className="hover:text-brand-primary cursor-pointer transition-colors">PRIVACY CODE</span>
             <span>•</span>
             <span className="hover:text-brand-primary cursor-pointer transition-colors">TERMS OF EXCLUSION</span>

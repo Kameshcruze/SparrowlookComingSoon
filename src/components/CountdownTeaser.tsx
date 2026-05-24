@@ -152,7 +152,7 @@ export default function CountdownTeaser() {
               rel="noopener noreferrer"
               className="text-[10px] font-mono uppercase tracking-wider text-stone-400 hover:text-brand-primary transition-colors flex items-center gap-1.5"
             >
-              <Calendar className="w-3.5 h-3.5" /> Google Calendar HOLD
+              <Calendar className="w-3.5 h-3.5" /> ADD TO CALENDAR
             </a>
           </div>
         </div>

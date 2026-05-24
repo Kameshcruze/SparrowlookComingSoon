@@ -42,12 +42,12 @@ export default function SocialTeaser() {
           <div className="flex items-center gap-2">
             <Instagram className="w-5 h-5 text-brand-primary" />
             <a
-              href="https://instagram.com" 
+              href="https://www.instagram.com/sparrowlook_com/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm font-mono tracking-widest text-stone-600 hover:text-brand-primary transition-colors uppercase font-bold"
             >
-              @SparrowLookOfficial
+              @sparrowlook_com
             </a>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function SocialTeaser() {
             "No studio models. No distracting products. Only the pure atmosphere of the loom."
           </p>
           <a
-            href="https://instagram.com" 
+            href="https://www.instagram.com/sparrowlook_com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="mt-3 inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#D2143A] hover:text-stone-900 transition-colors uppercase font-bold"
