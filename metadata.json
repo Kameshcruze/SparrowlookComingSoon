@@ -1,0 +1,6 @@
+{
+  "name": "Sparrow Look",
+  "description": "A premium, minimalist 'Coming Soon' launch page for the luxury Gen-Z fashion T-shirt brand Sparrow Look.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
