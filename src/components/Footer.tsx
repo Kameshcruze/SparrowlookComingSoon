@@ -76,12 +76,7 @@ export default function Footer({ onScrollToTop, onExploreClick, onSubscribeShort
                   Atmosphere Feeds
                 </a>
               </li>
-              <li>
-                <span className="text-stone-300 cursor-not-allowed">Press Pack (2026)</span>
-              </li>
-              <li>
-                <span className="text-stone-300 cursor-not-allowed">Wholesale Ledger</span>
-              </li>
+
             </ul>
           </div>
 

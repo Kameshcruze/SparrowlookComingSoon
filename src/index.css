@@ -19,8 +19,26 @@
     background-color: var(--color-brand-cream);
     color: #1a1a1a;
     font-family: var(--font-sans);
+    font-weight: 700; /* Bold style by default for the base font */
     overflow-x: hidden;
   }
+}
+
+/* Force the application of bold weight to all sans-serif (Inter) elements, overriding light/normal/medium overrides */
+body,
+.font-sans,
+[class*="font-sans"],
+.font-sans *,
+[class*="font-sans"] * {
+  font-weight: 700 !important;
+}
+
+/* Ensure that brand display, logo, dynamic syne, and serif headings retain their specific designed weights */
+.font-display, .font-display *,
+.font-syne, .font-syne *,
+.font-serif, .font-serif *,
+.font-logo, .font-logo * {
+  font-weight: revert !important;
 }
 
 /* Custom animated background elements */
