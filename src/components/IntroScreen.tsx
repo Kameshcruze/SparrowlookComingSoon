@@ -41,15 +41,43 @@ export default function IntroScreen({ onComplete }: IntroScreenProps) {
 
   // Adjust coordinates and sizing dynamically based on screen characteristics
   const getInitialPosition = () => {
-    if (isMobile) return { x: '75vw', scale: 1.6, filter: 'blur(10px) drop-shadow(0 0 15px rgba(210,20,58,0.15))' };
-    if (isTablet) return { x: '80vw', scale: 2.2, filter: 'blur(14px) drop-shadow(0 0 25px rgba(210,20,58,0.2))' };
-    return { x: '82vw', scale: 3.2, filter: 'blur(18px) drop-shadow(0 0 40px rgba(210,20,58,0.25))' };
+    return {
+      top: '50%',
+      left: '75vw',
+      y: '-50%',
+      x: '-50%',
+      scale: isMobile ? 1.4 : isTablet ? 1.8 : 2.4,
+      filter: isMobile 
+        ? 'blur(8px) drop-shadow(0 0 15px rgba(210,20,58,0.2))' 
+        : 'blur(16px) drop-shadow(0 0 40px rgba(210,20,58,0.35))',
+    };
   };
 
   const getTargetPosition = () => {
-    if (isMobile) return { x: '-2vw', scale: 1.0, filter: 'blur(0px) drop-shadow(0 0 0px rgba(210,20,58,0))' };
-    if (isTablet) return { x: '-6vw', scale: 1.0, filter: 'blur(0px) drop-shadow(0 0 0px rgba(210,20,58,0))' };
-    return { x: '-8vw', scale: 1.0, filter: 'blur(0px) drop-shadow(0 0 0px rgba(210,20,58,0))' };
+    const topVal = isMobile ? '24px' : '40px';
+    
+    // Compute dynamic left coordinate to match header placement
+    let leftVal = '32px';
+    if (isMobile) {
+      leftVal = '16px';
+    } else {
+      const width = typeof window !== 'undefined' ? window.innerWidth : 1440;
+      if (width >= 1280) {
+        // Centered max-w-7xl (1280px) offset + custom px padding (approx 32px)
+        leftVal = `calc((100vw - 1280px) / 2 + 32px)`;
+      } else {
+        leftVal = '32px';
+      }
+    }
+
+    return {
+      top: topVal,
+      left: leftVal,
+      y: '0%',
+      x: '0%',
+      scale: isMobile ? 0.375 : isTablet ? 0.29 : 0.22, // Shrinks gradually to match size="md" perfectly
+      filter: 'blur(0px) drop-shadow(0 0 0px rgba(210,20,58,0))',
+    };
   };
 
   return (
@@ -88,19 +116,19 @@ export default function IntroScreen({ onComplete }: IntroScreenProps) {
         </div>
       </div>
 
-      {/* Center Cinematic Stage */}
-      <div className="relative flex-grow flex items-center justify-center w-full h-full">
+      {/* Center Cinematic Stage - Relative box for coordinate absolute rendering */}
+      <div className="relative flex-grow w-full h-full">
         <motion.div
           layoutId="sparrow-logo-brand"
-          className="relative px-6 py-4 flex items-center"
+          className="absolute flex items-center"
           initial={getInitialPosition()}
           animate={hasStartedMovement ? getTargetPosition() : getInitialPosition()}
           transition={{
-            duration: 2.3,
+            duration: 2.5, // 2-3 seconds premium cinematic sweep
             ease: [0.16, 1, 0.3, 1], // Exquisite luxurious slow ease-out
           }}
           style={{
-            transformOrigin: 'left center',
+            transformOrigin: 'top left',
           }}
           id="cinematic-moving-logo"
         >

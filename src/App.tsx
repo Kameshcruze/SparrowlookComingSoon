@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
+import logoImg from './Layer 0.png';
 import BrandIdentity from './components/BrandIdentity';
 import CountdownTeaser from './components/CountdownTeaser';
 import WhySparrow from './components/WhySparrow';
@@ -69,84 +70,100 @@ export default function App() {
         className="bg-brand-primary text-white text-[9px] md:text-[10px] font-mono tracking-[0.25em] uppercase py-2.5 overflow-hidden relative z-50 select-none border-b border-brand-dark/25 w-full flex" 
         id="promo-banner-ticker"
       >
-        <div className="w-full flex items-center overflow-hidden">
+        <div className="w-full flex items-center overflow-hidden font-logo">
           {/* Infinite scrolling marquee wrapper moving right to left */}
           <div className="flex items-center animate-marquee-rtl gap-12 whitespace-nowrap pl-6">
             {/* Segment 1 */}
             <div className="flex items-center gap-6 shrink-0">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-100">
+              <div className="flex items-center gap-1.5 font-semibold text-rose-100 font-sans">
                 <Flame className="w-3.5 h-3.5 animate-bounce text-rose-200" />
                 <span>Priority Drop Entry Queue Active</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-sans">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-200" />
                 <span>{securedRegistryCount.toLocaleString()} Members Reserved Globally</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5 font-bold text-white">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-bold text-white font-sans">
                 <span>First Session Launches June 18, 2026</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
-            <span className="opacity-30 font-bold tracking-widest">// SPARROWLOOK //</span>
+            <span className="opacity-40 font-bold tracking-widest inline-flex items-center gap-1.5 shrink-0 select-none">
+              <span>//</span>
+              <img src={logoImg} className="w-3.5 h-3.5 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
+              <span>SPARROWLOOK //</span>
+            </span>
 
             {/* Segment 2 */}
             <div className="flex items-center gap-6 shrink-0">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-100">
+              <div className="flex items-center gap-1.5 font-semibold text-rose-100 font-sans">
                 <Flame className="w-3.5 h-3.5 animate-bounce text-rose-200" />
                 <span>Priority Drop Entry Queue Active</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-sans">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-200" />
                 <span>{securedRegistryCount.toLocaleString()} Members Reserved Globally</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5 font-bold text-white">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-bold text-white font-sans">
                 <span>First Session Launches June 18, 2026</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
-            <span className="opacity-30 font-bold tracking-widest">// SPARROWLOOK //</span>
+            <span className="opacity-40 font-bold tracking-widest inline-flex items-center gap-1.5 shrink-0 select-none">
+              <span>//</span>
+              <img src={logoImg} className="w-3.5 h-3.5 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
+              <span>SPARROWLOOK //</span>
+            </span>
 
             {/* Segment 3 */}
-            <div className="flex items-center gap-6 shrink-0 font-bold text-white">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-100">
+            <div className="flex items-center gap-6 shrink-0 font-bold text-white font-sans">
+              <div className="flex items-center gap-1.5 font-semibold text-rose-100 font-sans">
                 <Flame className="w-3.5 h-3.5 animate-bounce text-rose-200" />
                 <span>Priority Drop Entry Queue Active</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-sans">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-200" />
                 <span>{securedRegistryCount.toLocaleString()} Members Reserved Globally</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5 font-bold text-white">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-bold text-white font-sans">
                 <span>First Session Launches June 18, 2026</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
-            <span className="opacity-30 font-bold tracking-widest">// SPARROWLOOK //</span>
+            <span className="opacity-40 font-bold tracking-widest inline-flex items-center gap-1.5 shrink-0 select-none">
+              <span>//</span>
+              <img src={logoImg} className="w-3.5 h-3.5 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
+              <span>SPARROWLOOK //</span>
+            </span>
 
             {/* Segment 4 */}
-            <div className="flex items-center gap-6 shrink-0">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-100">
+            <div className="flex items-center gap-6 shrink-0 font-sans">
+              <div className="flex items-center gap-1.5 font-semibold text-rose-100 font-sans">
                 <Flame className="w-3.5 h-3.5 animate-bounce text-rose-200" />
                 <span>Priority Drop Entry Queue Active</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-sans">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-200" />
                 <span>{securedRegistryCount.toLocaleString()} Members Reserved Globally</span>
               </div>
-              <span className="opacity-40">•</span>
-              <div className="flex items-center gap-1.5 font-bold text-white">
+              <span className="opacity-40 font-sans">•</span>
+              <div className="flex items-center gap-1.5 font-bold text-white font-sans">
                 <span>First Session Launches June 18, 2026</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
-            <span className="opacity-30 font-bold tracking-widest">// SPARROWLOOK //</span>
+            <span className="opacity-40 font-bold tracking-widest inline-flex items-center gap-1.5 shrink-0 select-none">
+              <span>//</span>
+              <img src={logoImg} className="w-3.5 h-3.5 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
+              <span>SPARROWLOOK //</span>
+            </span>
           </div>
         </div>
       </motion.div>

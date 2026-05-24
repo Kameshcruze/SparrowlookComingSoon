@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Instagram, Heart, MessageCircle, Send, Sparkles, Compass } from 'lucide-react';
 import { INSTAGRAM_TEASERS } from '../data';
+import logoImg from '../Layer 0.png';
 
 export default function SocialTeaser() {
   const [likes, setLikes] = useState<{ [key: string]: number }>({
@@ -71,7 +72,10 @@ export default function SocialTeaser() {
                       SL
                     </div>
                     <div className="leading-none">
-                      <span className="text-[11px] font-mono font-bold text-stone-800 uppercase block">sparrowlook</span>
+                      <span className="text-[11px] font-mono font-bold text-stone-800 uppercase flex items-center gap-1.5">
+                        <img src={logoImg} className="w-3 h-3 object-contain" alt="Sparrow Logo" referrerPolicy="no-referrer" />
+                        sparrowlook
+                      </span>
                       <span className="text-[9px] font-mono text-stone-400">Atmosphere drop</span>
                     </div>
                   </div>
